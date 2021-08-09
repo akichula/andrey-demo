@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css" th:href="@{style.css}">
+    <title>Add new Gachi Music</title>
+</head>
+<body>
+<h1 style="color: blueviolet">Gachi Rating 3000</h1>
+<a href="/">Return to gachi list</a>
+<h3>Add new gachi music:</h3>
+<form th:action="@{/addGachi}" method="post">
+    <label for="nameInput">Gachi name</label>
+    <input id="nameInput" type="text" name="name">
+
+    <label for="urlInput">Gachi url</label>
+    <input id="urlInput" type="url" name="url">
+
+    <label for="ratingInput">Gachi rating</label>
+    <input id="ratingInput" type="number" name="rating">
+
+    <button type="submit">Add new gachi</button>
+</form>
+</body>
+</html>
